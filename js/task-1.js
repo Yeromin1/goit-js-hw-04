@@ -1,9 +1,11 @@
 'use strict';
 
 function isEnoughCapacity(products, containerSize) {
-    const totalItems = Object.values(products).reduce((total, count) => total + count, 0);
-    
-    return totalItems <= containerSize;
+  let total = 0;
+  for (const product of Object.values(products)) {
+      total += product;
+  } 
+  return total <= containerSize;
 }
 
 
