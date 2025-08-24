@@ -1,27 +1,17 @@
 "use strict";
 
-// function isEnoughCapacity(products, containerSize) {
-//   let total = 0;
-//   for (const product of Object.values(products)) {
-//     total += product;
-//   }
-//   return total <= containerSize;
-// }
-
-// console.log(isEnoughCapacity({ apples: 2, grapes: 3, carrots: 1 }, 8)); // true
-
-// console.log(isEnoughCapacity({ apples: 4, grapes: 6, lime: 16 }, 12)); // false
-
-// console.log(isEnoughCapacity({ apples: 1, lime: 5, tomatoes: 3 }, 14)); // true
-
-// console.log(isEnoughCapacity({ apples: 18, potatoes: 5, oranges: 2 }, 7)); // false
-
-const numbers = [1, 200, 30, 4, 50, 66, 7, 866, 99, 10];
-
-function findMaxNumber(numbers) {
-  return Math.max(...numbers);
+function isEnoughCapacity(products, containerSize) {
+  let total = 0;
+  for (const product of Object.values(products)) {
+    total += product;
+  }
+  return total <= containerSize;
 }
 
-const max = findMaxNumber(numbers);
+console.log(isEnoughCapacity({ apples: 2, grapes: 3, carrots: 1 }, 8)); // true
 
-console.log(max);
+console.log(isEnoughCapacity({ apples: 4, grapes: 6, lime: 16 }, 12)); // false
+
+console.log(isEnoughCapacity({ apples: 1, lime: 5, tomatoes: 3 }, 14)); // true
+
+console.log(isEnoughCapacity({ apples: 18, potatoes: 5, oranges: 2 }, 7)); // false
